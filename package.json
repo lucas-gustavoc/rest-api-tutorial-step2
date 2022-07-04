@@ -1,0 +1,31 @@
+{
+  "name": "restful-api-tutorial-step1",
+  "version": "1.0.0",
+  "description": "A tutorial on how to create a complete Node.js based RESTful API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-gustavoc/rest-api-tutorial-step1.git"
+  },
+  "keywords": [
+    "restful-api",
+    "node.js",
+    "api"
+  ],
+  "author": "Lucas Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-gustavoc/rest-api-tutorial-step1/issues"
+  },
+  "homepage": "https://github.com/lucas-gustavoc/rest-api-tutorial-step1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
