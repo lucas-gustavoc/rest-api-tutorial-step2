@@ -4,7 +4,7 @@
   "description": "A tutorial on how to create a complete Node.js based RESTful API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon src/index"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
+    "jest": "^28.1.2",
     "nodemon": "^2.0.18"
   }
 }

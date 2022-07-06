@@ -27,6 +27,8 @@ router.post('/wishes', (req, res) => {
     }
 })
 
+// This is a get request to the address http://our_server_address/wishes
+// It does not expect any data and return all the wishes list
 router.get('/wishes', (req, res) => {
     try {
         res.status(200).send(Wish.getAll())
@@ -35,6 +37,8 @@ router.get('/wishes', (req, res) => {
     }
 })
 
+// This is a get request to the address http://our_server_address/wishes/[wishid]
+// It expects just the wish ID on the request URL and returns the appropriate wish
 router.get('/wishes/:id', (req, res) => {
     try {
         const foundWish = Wish.getOne(req.params.id)
@@ -48,6 +52,8 @@ router.get('/wishes/:id', (req, res) => {
     }
 })
 
+// This is a patch request to the address http://our_server_address/wishes/[wishid]
+// It expects JSON data and the wish ID on the URL, and return the updated register
 router.patch('/wishes/:id', (req, res) => {
     try {
         const updatedWish = Wish.patch(req.params.id, req.body)
@@ -61,6 +67,8 @@ router.patch('/wishes/:id', (req, res) => {
     }
 })
 
+// This is a delete request to the address http://our_server_address/wishes/[wishid]
+// It expects just the wish ID on the URL, and returns a message about the deletion
 router.delete('/wishes/:id', (req, res) => {
     try {
         const deleteMessage = Wish.delete(req.params.id)

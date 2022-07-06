@@ -13,6 +13,7 @@ class Wish {
 
     static wishes = []
 
+    // tested
     static create(wish) {
         if (Wish.validate(wish)) {
             wish.id = uniqid()
@@ -23,6 +24,7 @@ class Wish {
         }
     }
 
+    // tested
     static validate(wish) {
         let valid = true
         if (!wish.wish) valid = false
@@ -30,15 +32,18 @@ class Wish {
         return valid
     }
 
+    // tested
     static getAll() {
         return Wish.wishes
     }
 
+    // tested
     static getOne(id) {
         const wish = Wish.wishes.find(item => item.id == id)
         return wish
     }
 
+    // tested
     static patch(id, patches) {
         const wishToPatch = Wish.getOne(id)
         if (wishToPatch) {
@@ -53,6 +58,7 @@ class Wish {
         }
     }
 
+    // tested
     static delete(id) {
         const wishIndex = Wish.wishes.findIndex(item => item.id == id)
         if (wishIndex > -1) {
